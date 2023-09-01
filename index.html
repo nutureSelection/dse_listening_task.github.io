@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK&display=swap" rel="stylesheet">
+
+    <title>P3_Format</title>
+
+    <style>
+        body{
+            font-family: 'Ma Shan Zheng', cursive;
+            font-family: 'Noto Sans HK', sans-serif;
+            font-family: 'VT323', monospace;
+            text-align: center;
+        }
+        table{
+            width: 100%;
+            /* border: 3px solid #000000; */
+            border-collapse: collapse;
+        }
+        td{
+            border: 2px solid #000000;
+            width: 5%;
+            border-collapse: collapse;
+        }
+        img{
+            width: 100%;
+            text-align: center;
+        }
+        #photo_show{
+            display: none;
+        }
+        .in_td{
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <table id="task_table">
+        <tr>
+            <td></td><td>Leaflet/<br>Form</td><td>Article</td><td>Profile</td><td>Report</td><td>Letter</td><td>Email</td><td>Paragraph/<br>Main Body</td><td>Announce ment</td><td>Speech</td><td>Script</td>
+        </tr>
+        <tr>
+            <td>2012</td><td></td><td><table class="in_table"><tr><td class="in_td"><p>T9</p></td></tr><tr><td class="in_td"><p>T10</p></td></tr></table></td><td></td><td></td><td></td><td></td><td>T8</td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>2013</td><td></td><td><table class="in_table"><tr><td class="in_td"><p>T8</p></td></tr><tr><td class="in_td"><p>T10</p></td></tr></table></td><td></td><td></td><td></td><td>T9</td><td></td><td></td><td></td><td></td>
+        </tr>
+        
+        <tr>
+            <td>2014</td><td></td><td><p>T8</p></td><td></td><td></td><td><p>T10</p></td><td></td><td></td><td></td><td>T9</td><td></td>
+        </tr>
+        
+        <tr>
+            <td>2015</td><td></td><td><p>T10</p></td><td></td><td></td><td></td><td><table class="in_table"><tr><td class="in_td"><p>T8</p></td></tr><tr><td class="in_td"><p>T9</p></td></tr></table></td><td></td><td></td><td></td><td></td>
+        </tr>
+        
+        <tr>
+            <td>2016</td><td></td><td></td><td></td><td></td><td></td><td><p>T8</p></td><td><table class="in_table"><tr><td class="in_td"><p>T9</p></td></tr><tr><td class="in_td"><p>T10</p></td></tr></table></td><td></td><td></td><td></td>
+        </tr>
+        
+        <tr>
+            <td>2017</td><td></td><td><p>T9</p></td><td></td><td><p>T8</p></td><td><p>T10</p></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        
+        <tr>
+            <td>2018</td><td></td><td></td><td></td><td><p>T8</p></td><td></td><td><table class="in_table"><tr><td class="in_td"><p>T9</p></td></tr><tr><td class="in_td"><p>T10</p></td></tr></table></td><td></td><td></td><td></td><td></td>
+        </tr>
+        
+        <tr>
+            <td>2019</td><td></td><td><p>T9</p></td><td></td><td><p>T8</p></td><td></td><td></td><td></td><td></td><td><p>T9</p></td><td></td>
+        </tr>
+        
+        <tr>
+            <td>2020</td><td></td><td></td><td></td><td><p>T9</p></td><td></td><td><p>T10</p></td><td></td><td></td><td></td><td><p>T8</p></td>
+        </tr>
+        
+        <tr>
+            <td>2021</td><td></td><td></td><td></td><td></td><td><p>T9</p></td><td><table class="in_table"><tr><td class="in_td"><p>T8</p></td></tr><tr><td class="in_td"><p>T10</p></td></tr></table></td><td></td><td></td><td></td><td></td>
+        </tr>
+        
+        <tr>
+            <td>2022</td><td></td><td></td><td></td><td></td><td></td><td><p>T9</p></td><td><p>T8</p></td><td></td><td><p>T10</p></td><td></td>
+        </tr>
+        
+        <tr>
+            <td>2023</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+    </table>
+    <div id="photo_show">
+        <h2 id="title_task"></h2>
+        <!-- <br> -->
+        <p><img src="" alt=""></p>
+        <br>
+        <p><img src="" alt=""></p>
+        <br>
+        <p><img src="" alt=""></p>
+        <p><img src="" alt=""></p>
+        <br>
+        <p><img src="" alt=""></p>
+        <br>
+        <p><img src="" alt=""></p>
+    </div>
+
+    <script>
+        let task_table = document.getElementById("task_table")
+        let in_td = document.getElementsByClassName("in_td")
+        let in_table = document.getElementsByClassName("in_table")
+        let img = document.getElementsByTagName("img")
+        let photo_show = document.getElementById("photo_show")
+        let title_task = document.getElementById("title_task")
+        let years
+        let task
+        let final
+
+        let year_list = [2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023]
+
+        let article_first = ["","2014T8"]
+        let article_second = ["","2015T10"]
+        let article_third = ["","2017T9"]
+        let article_fouth = ["","2019T9"]
+        let article_fiveth = ["https://www.thestandard.com.hk/images/instant_news/20230719/20230719143926206115contentPhoto1.jpg","2012T9"]
+        let article_sixth = ["","2012T10"]
+        let article_seventh = ["","2013T8"]
+        let article_eighth = ["","2012T10"]
+
+        let report_first = ["","2017T8"]
+        let report_second = ["","2018T8"]
+        let report_third = ["","2019T8"]
+        let report_fouth = ["","2020T9"]
+
+        let letter_first = ["","2014T10"]
+        let letter_second = ["","2017T10"]
+        let letter_third = ["","2021T9"]
+
+        let email_first = ["","2013T9"]
+        let email_second = ["","2016T8"]
+        let email_third = ["","2020T10"]
+        let email_fouth = ["","2022T9"]
+        let email_fiveth = ["","2015T8"]
+        let email_sixth = ["","2015T9"]
+        let email_seventh = ["","2018T10"]
+        let email_eighth = ["","2018T9"]
+        let email_nineth = ["","2021T8"]
+        let email_tenth = ["","2021T10"]
+
+        let mainbody_first = ["","2012T8"]
+        let mainbody_second = ["","2022T8"]
+        let mainbody_third = ["","2016T9"]
+        let mainbody_fourth = ["","2016T10"]
+
+        let speech_first = ["","2014T9"]
+        let speech_second = ["","2019T9"]
+        let speech_third = ["","2022T10"]
+
+        let script_first = ["","2020T8"]
+
+        let all_list_name = [article_first,article_second,article_third,article_fouth,report_first,report_second,report_third,report_fouth,letter_first,letter_second,letter_third,
+                            email_first,email_second,email_third,email_fouth,mainbody_first,mainbody_second,speech_first,speech_second,speech_third,script_first,article_fiveth,article_sixth,
+                            article_seventh,article_eighth,email_fiveth,email_sixth,email_seventh,email_eighth.email_nineth,email_tenth,mainbody_third.mainbody_fourth
+                            ]
+        
+        // console.log(in_table[0].rows[0].cells[0].innerText)
+        // console.log(task_table.rows[2].cells[1].rows[0].cells[0].innerText)
+        // console.log(task_table.rows[2].cells[2])
+        for(let i = 0;i<13;i++){
+            //列   直
+            for(let x = 0;x<11;x++){
+                //栏   横
+                for(let b=0;b<6;b++){
+                    // in table
+                    for(let c=0;c<2;c++){
+                        let choose = task_table.rows[i].cells[x]
+                        let in_year = task_table.rows[i].cells[x]
+                        let in_task_name = task_table.rows[0].cells[x].innerText
+                        let in_choose = in_table[b].rows[c].cells[0]
+                        choose.addEventListener("click",function(){
+
+                            task = choose.innerText
+                            years = task_table.rows[i].cells[0].innerText
+                            let task_name = task_table.rows[0].cells[x].innerText
+                            let final = years+task
+                            
+                            if(final.length==6||final.length==7){
+                                //表格显示的更改
+                                title_task.innerText = years+" "+task+" "+task_name
+                                photo_show.style.display="inline"
+                                task_table.style.display = "none"
+                                for(let a=0;a<all_list_name.length;a++){
+                                    let task_foucs = all_list_name[a][all_list_name[a].length-1]
+                                    let task_foucs_list = all_list_name[a]
+                                    if(final==task_foucs){
+                                        for(let y = 0;y<=task_foucs_list.length-2;y++){
+                                            // console.log(task_foucs.length)
+                                            if(y != task_foucs_list.length-1){
+                                                img[y].src = task_foucs_list[y]
+                                            }
+                                            else{
+                                                return
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }),
+                        in_choose.addEventListener("click",function(){
+                            task = in_choose.innerText
+                            // years = task_table.rows[i].cells[0].innerText
+                            let in_final = years+in_choose.innerText
+                            let task_name = task_table.rows[0].cells[x].innerText
+                            // console.log(in_final)
+                            
+                            if(in_final.length==6||in_final.length==7){
+                                //表格显示的更改
+                                title_task.innerText = years+" "+task+" "+task_name
+                                photo_show.style.display="inline"
+                                task_table.style.display = "none"
+                                for(let a=0;a<all_list_name.length;a++){
+                                    let task_foucs = all_list_name[a][all_list_name[a].length-1]
+                                    let task_foucs_list = all_list_name[a]
+                                    // console.log(in_final)
+                                    if(in_final==task_foucs){
+                                        for(let y = 0;y<=task_foucs_list.length-2;y++){
+                                            // console.log(task_foucs.length)
+                                            if(y != task_foucs_list.length-1){
+                                                img[y].src = task_foucs_list[y]
+                                            }
+                                            else{
+                                                return
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        })
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
