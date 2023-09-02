@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK&display=swap" rel="stylesheet">
 
-    <title>P3_Format</title>
+    <title>---Listening_Format_Example---</title>
 
     <style>
         body{
@@ -99,6 +99,7 @@
         <p><img src="" alt=""></p>
         <br>
         <p><img src="" alt=""></p>
+        <br>
         <p><img src="" alt=""></p>
         <br>
         <p><img src="" alt=""></p>
@@ -117,45 +118,50 @@
         let task
         let final
 
-        let year_list = [2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023]
-
         let article_first = ["","2014T8"]
         let article_second = ["","2015T10"]
-        let article_third = ["","2017T9"]
-        let article_fouth = ["https://raw.githubusercontent.com/nutureSelection/dse_listening_task.github.io/main/2019%20(1).jpg","2019T9"]
+        let article_third = ["https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2017-Sample-ENG-Paper3_3.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2017-Sample-ENG-Paper3_4.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2017-Sample-ENG-Paper3_9.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2017-Sample-ENG-Paper3_10.jpg?raw=true","2017T9"]
+        let article_fouth = ["https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2019-Sample-ENG-Paper3_4.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2019-Sample-ENG-Paper3_5.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2019-Sample-ENG-Paper3_11.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2019-Sample-ENG-Paper3_12.jpg?raw=true","2019T9"]
         let article_fiveth = ["","2012T9"]
         let article_sixth = ["","2012T10"]
         let article_seventh = ["","2013T8"]
         let article_eighth = ["","2012T10"]
 
-        let report_first = ["","2017T8"]
-        let report_second = ["","2018T8"]
-        let report_third = ["https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2019%20(2).jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2019%20(3).jpg?raw=true","2019T8"]
+        let report_first = ["https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2017-Sample-ENG-Paper3_1.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2017-Sample-ENG-Paper3_2.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2017-Sample-ENG-Paper3_7.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2017-Sample-ENG-Paper3_8.jpg?raw=true","2017T8"]
+        let report_second = ["https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2018-Sample-ENG-Paper3_1.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2018-Sample-ENG-Paper3_2.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2018-Sample-ENG-Paper3_5.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2018-Sample-ENG-Paper3_6.jpg?raw=true","2018T8"]
+        let report_third = ["https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2019-Sample-ENG-Paper3_1.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2019-Sample-ENG-Paper3_2.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2019-Sample-ENG-Paper3_3.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2019-Sample-ENG-Paper3_8.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2019-Sample-ENG-Paper3_9.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2019-Sample-ENG-Paper3_10.jpg?raw=true","2019T8"]
         let report_fouth = ["","2020T9"]
 
         let letter_first = ["","2014T10"]
-        let letter_second = ["","2017T10"]
+        let letter_second = ["https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2017-Sample-ENG-Paper3_5.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2017-Sample-ENG-Paper3_6.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2017-Sample-ENG-Paper3_11.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2017-Sample-ENG-Paper3_12.jpg?raw=true","2017T10"]
         let letter_third = ["https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2021%20(1).jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2021%20(5).jpg?raw=true","2021T9"]
 
         let email_first = ["","2013T9"]
         let email_second = ["https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2016-Sample-ENG-Paper3_1.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2016-Sample-ENG-Paper3_2.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2016-Sample-ENG-Paper3_7.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2016-Sample-ENG-Paper3_7.jpg?raw=true","2016T8"]
         let email_third = ["","2020T10"]
-        let email_fouth = ["","2022T9"]
+        let email_fouth = ["https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2022-Sample-ENG-Paper3_3.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2022-Sample-ENG-Paper3_4.jpg?raw=true", 
+        "https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2022-Sample-ENG-Paper3_9.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2022-Sample-ENG-Paper3_10.jpg?raw=true"
+        ,"2022T9"]
         let email_fiveth = ["","2015T8"]
         let email_sixth = ["","2015T9"]
-        let email_seventh = ["","2018T10"]
-        let email_eighth = ["","2018T9"]
+        let email_seventh = ["https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2018-Sample-ENG-Paper3_4.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2018-Sample-ENG-Paper3_9.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2018-Sample-ENG-Paper3_10.jpg?raw=true","2018T10"]
+        let email_eighth = ["https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2018-Sample-ENG-Paper3_3.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2018-Sample-ENG-Paper3_7.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2018-Sample-ENG-Paper3_8.jpg?raw=true","2018T9"]
         let email_nineth = ["https://raw.githubusercontent.com/nutureSelection/dse_listening_task.github.io/main/2021%20(5).jpg","https://raw.githubusercontent.com/nutureSelection/dse_listening_task.github.io/main/2021%20(6).jpg","2021T8"]
         let email_tenth = ["https://raw.githubusercontent.com/nutureSelection/dse_listening_task.github.io/main/2021%20(3).jpg","2021T10"]
 
         let mainbody_first = ["","2012T8"]
-        let mainbody_second = ["","2022T8"]
+        let mainbody_second = ["https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2022-Sample-ENG-Paper3_1.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2022-Sample-ENG-Paper3_2.jpg?raw=true",
+        "https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2022-Sample-ENG-Paper3_7.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2022-Sample-ENG-Paper3_8.jpg?raw=true"
+        ,"2022T8"]
         let mainbody_third = ["https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2016-Sample-ENG-Paper3_3.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2016-Sample-ENG-Paper3_4.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2016-Sample-ENG-Paper3_9.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2016-Sample-ENG-Paper3_10.jpg?raw=true","2016T9"]
         let mainbody_fourth = ["https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2016-Sample-ENG-Paper3_5.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2016-Sample-ENG-Paper3_6.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2016-Sample-ENG-Paper3_11.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2016-Sample-ENG-Paper3_12.jpg?raw=true","2016T10"]
 
         let speech_first = ["","2014T9"]
-        let speech_second = ["https://raw.githubusercontent.com/nutureSelection/dse_listening_task.github.io/main/2019%20(4).jpg","2019T10"]
-        let speech_third = ["","2022T10"]
+        let speech_second = ["https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2019-Sample-ENG-Paper3_6.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2019-Sample-ENG-Paper3_7.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2019-Sample-ENG-Paper3_13.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2019-Sample-ENG-Paper3_14.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2019-Sample-ENG-Paper3_15.jpg?raw=true","2019T10"]
+        let speech_third = ["https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2022-Sample-ENG-Paper3_5.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2022-Sample-ENG-Paper3_6.jpg?raw=true",
+        "https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2022-Sample-ENG-Paper3_11.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2022-Sample-ENG-Paper3_12.jpg?raw=true",
+        "https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2022-Sample-ENG-Paper3_23.jpg?raw=true","https://github.com/nutureSelection/dse_listening_task.github.io/blob/main/2022-Sample-ENG-Paper3_24.jpg?raw=true"
+        ,"2022T10"]
 
         let script_first = ["","2020T8"]
 
