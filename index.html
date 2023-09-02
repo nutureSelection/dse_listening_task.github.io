@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <title>---Listening_Format_Example---</title>
 
@@ -36,6 +37,19 @@
         }
         .in_td{
             border: none;
+        }
+        #back{
+            position: absolute;
+            top: 5%;
+            left: 10%;
+            transform: translate(-50%,-50%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
         }
     </style>
 </head>
@@ -92,7 +106,7 @@
         </tr>
     </table>
     <div id="photo_show">
-        <h2 id="title_task"></h2>
+        <span class="material-symbols-outlined" id="back">arrow_back</span><h2 id="title_task"></h2>
         <!-- <br> -->
         <p><img src="" alt=""></p>
         <br>
@@ -114,6 +128,7 @@
         let img = document.getElementsByTagName("img")
         let photo_show = document.getElementById("photo_show")
         let title_task = document.getElementById("title_task")
+        let back = document.getElementById("back")
         let years
         let task
         let final
@@ -263,6 +278,16 @@
                 }
             }
         }
+        if(window.innerWidth>window.innerHeight){
+            back.style.top = "5%"
+        }
+        else{
+            back.style.top = "3%"
+        }
+        back.addEventListener("click",function(){
+            photo_show.style.display = "none"
+            task_table.style.display = "inline"
+        })
     </script>
 </body>
 </html>
