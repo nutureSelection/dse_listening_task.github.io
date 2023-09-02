@@ -39,7 +39,8 @@
             border: none;
         }
         #back{
-            position: absolute;
+            transition: 0.5ms;
+            position:fixed;
             top: 5%;
             left: 10%;
             transform: translate(-50%,-50%);
@@ -278,12 +279,14 @@
                 }
             }
         }
-        if(window.innerWidth>window.innerHeight){
-            back.style.top = "5%"
-        }
-        else{
-            back.style.top = "3%"
-        }
+        setInterval(function(){
+            if(window.innerWidth>window.innerHeight){
+                back.style.top = "5%"
+            }
+            else{
+                back.style.top = "3%"
+            }
+        },1000)
         back.addEventListener("click",function(){
             photo_show.style.display = "none"
             task_table.style.display = "inline"
