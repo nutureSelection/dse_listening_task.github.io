@@ -125,7 +125,7 @@
 
     <script>
         let task_table = document.getElementById("task_table")
-        let in_td = document.getElementsByClassName("in_td")
+        // let in_td = document.getElementsByClassName("in_td")
         let in_table = document.getElementsByClassName("in_table")
         let img = document.getElementsByTagName("img")
         let photo_show = document.getElementById("photo_show")
@@ -180,6 +180,7 @@
         // console.log(in_table[0].rows[0].cells[0].innerText)
         // console.log(task_table.rows[2].cells[1].rows[0].cells[0].innerText)
         // console.log(task_table.rows[2].cells[2])
+        // task_table.addEventListener("touchend")
         for(let i = 0;i<13;i++){
             //列   直
             for(let x = 0;x<11;x++){
@@ -190,7 +191,7 @@
                         let choose = task_table.rows[i].cells[x]
                         // let in_year = task_table.rows[i].cells[x].innerText
                         let in_task_name = task_table.rows[0].cells[x].innerText
-                        choose.addEventListener("click",function(){
+                        choose.addEventListener("touchend",function(){
 
                             task = choose.innerText
                             years = task_table.rows[i].cells[0].innerText
