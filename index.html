@@ -191,7 +191,7 @@
                         let choose = task_table.rows[i].cells[x]
                         // let in_year = task_table.rows[i].cells[x].innerText
                         let in_task_name = task_table.rows[0].cells[x].innerText
-                        choose.addEventListener("touchend",function(){
+                        choose.addEventListener("click",function(){
 
                             task = choose.innerText
                             years = task_table.rows[i].cells[0].innerText
@@ -263,20 +263,16 @@
                 }
             }
         }
-        // setInterval(function(){
-        //     if(window.innerWidth>window.innerHeight){
-        //         back.style.top = "5%"
-        //     }
-        //     else{
-        //         back.style.top = "3%"
-        //     }
-        // },1000)
-        if(window.innerWidth>window.innerHeight){
-            back.style.top = "5%"
-        }
-        else{
-            back.style.top = "3%"
-        }
+        setInterval(function(){
+            if(back.style.display!="none"){
+                if(window.innerWidth>window.innerHeight){
+                    back.style.top = "5%"
+                }
+                else{
+                    back.style.top = "3%"
+                }
+            }
+        },1000)
         back.addEventListener("click",function(){
             photo_show.style.display = "none"
             task_table.style.display = "inline"
