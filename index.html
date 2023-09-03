@@ -190,13 +190,16 @@
                         let choose = task_table.rows[i].cells[x]
                         // let in_year = task_table.rows[i].cells[x].innerText
                         let in_task_name = task_table.rows[0].cells[x].innerText
-                        let in_choose = in_table[b].rows[c].cells[0]
                         choose.addEventListener("click",function(){
 
                             task = choose.innerText
                             years = task_table.rows[i].cells[0].innerText
                             let task_name = task_table.rows[0].cells[x].innerText
+
                             let final = years+task
+                            // console.log(final)
+                            // final_list.push(final)
+                            // console.log(final_list)
                             
                             if(final.length==6||final.length==7){
                                 //表格显示的更改
@@ -221,6 +224,7 @@
                                 }
                             }
                         })
+                        let in_choose = in_table[b].rows[c].cells[0]
                         let in_tasks_name = ["Article","Article","Main body","Email","Email","Email"]
                         let in_years_name = ["2012","2013","2015","2016","2018","2021"]
                         in_choose.addEventListener("click",function(){
@@ -229,7 +233,7 @@
                             task = in_choose.innerText
                             // years = task_table.rows[i].cells[0].innerText
                             let in_final = in_year+in_choose.innerText
-                            // console.log(in_final)
+                            // console.log(in_final.length)
                             
                             if(in_final.length==6 || in_final.length==7){
                                 //表格显示的更改
@@ -239,7 +243,7 @@
                                 for(let a=0;a<all_list_name.length;a++){
                                     let task_foucs = all_list_name[a][all_list_name[a].length-1]
                                     let task_foucs_list = all_list_name[a]
-                                    // console.log(in_final)
+                                    // console.log(task_foucs_list.length)
                                     if(in_final==task_foucs){
                                         for(let y = 0;y<=task_foucs_list.length-2;y++){
                                             // console.log(task_foucs.length)
