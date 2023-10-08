@@ -12,13 +12,13 @@
     <!-- <script src="http://raw.githack.com/nutureSelection/dse_listening_task.github.io/main/task.js"></script> -->
 
     <title>---Listening_Format_Example---</title>
-    <link rel="website icon" type="png" href="https://raw.githubusercontent.com/nutureSelection/dse_listening_task.github.io/main/application.png">
+    <link rel="website icon" type="png" href="https://raw.githubusercontent.com/nutureSelection/dse_listening_task.github.io/main/eng.png">
 
     <style>
         body{
-            font-family: 'Ma Shan Zheng', cursive;
+            /* font-family: 'Ma Shan Zheng', cursive; */
             font-family: 'Noto Sans HK', sans-serif;
-            font-family: 'VT323', monospace;
+            /* font-family: 'VT323', monospace; */
             text-align: center;
         }
         table{
@@ -57,12 +57,15 @@
             'GRAD' 0,
             'opsz' 24
         }
+        #logo{
+            width: 50px;
+        }
     </style>
 </head>
 <body>
     <table id="task_table">
         <tr>
-            <td></td><td>Leaflet/<br>Form</td><td>Article</td><td>Profile</td><td>Report</td><td>Letter</td><td>Email</td><td>Paragraph/<br>Main Body</td><td>Announce ment</td><td>Speech</td><td>Script</td>
+            <td><img src="https://raw.githubusercontent.com/nutureSelection/dse_listening_task.github.io/main/eng (1).png" alt="" srcset="" id="logo"></td><td>Leaflet/<br>Form</td><td>Article</td><td>Profile</td><td>Report</td><td>Letter</td><td>Email</td><td>Paragraph/<br>Main Body</td><td>Announce ment</td><td>Speech</td><td>Script</td>
         </tr>
         <tr>
             <td>2012</td><td></td><td><table class="in_table"><tr><td class="in_td">T9</td></tr><tr><td class="in_td">T10</td></tr></table></td><td></td><td></td><td></td><td></td><td>T8</td><td></td><td></td><td></td>
@@ -190,6 +193,13 @@
             //列   直
             for(let x = 0;x<11;x++){
                 //栏   横
+                task_table.rows[i].cells[0].addEventListener("click",function(){
+                    photo_show.style.display = "inline"
+                    task_table.style.display = "none"
+
+                    let years = task_table.rows[i].cells[0].innerText
+                    img[1].src =`https://raw.githubusercontent.com/nutureSelection/dse_listening_task.github.io/main/${years}Conversion.jpg`
+                })
                 for(let b=0;b<6;b++){
                     // in table
                     for(let c=0;c<2;c++){
