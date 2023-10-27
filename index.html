@@ -226,10 +226,9 @@
                                     let task_foucs = all_list_name[a][all_list_name[a].length-1]
                                     let task_foucs_list = all_list_name[a]
                                     if(final==task_foucs){
-                                        for(let y = 0;y<=task_foucs_list.length;y++){
-                                            // console.log(task_foucs.length)
-                                            if(y != task_foucs_list.length-1){
-                                                img[y].src = task_foucs_list[y]
+                                        for(let y = 0;y<task_foucs_list.length-1;y++){
+                                            if(y != task_foucs_list.length){
+                                                img[y+1].src = task_foucs_list[y]
                                             }
                                             else{
                                                 return
@@ -259,10 +258,9 @@
                                     let task_foucs_list = all_list_name[a]
                                     // console.log(task_foucs_list.length)
                                     if(in_final==task_foucs){
-                                        for(let y = 0;y<=task_foucs_list.length-2;y++){
-                                            // console.log(task_foucs.length)
-                                            if(y!=task_foucs_list.length-1){
-                                                img[y].src = task_foucs_list[y]
+                                        for(let y = 0;y<task_foucs_list.length-1;y++){
+                                            if(y != task_foucs_list.length){
+                                                img[y+1].src = task_foucs_list[y]
                                             }
                                             else{
                                                 return
